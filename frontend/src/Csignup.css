@@ -1,4 +1,4 @@
-.clogin{
+.csignup{
     font-family: monospace;
     font-size: large;
     background-color: #839788;
@@ -8,8 +8,7 @@
     align-items: center;
 }
 
-
-.clmaindiv{
+.csmaindiv{
     background: rgba(255, 255, 255, 0.452);
     backdrop-filter: blur(30px);
     height: 60%;
@@ -21,23 +20,4 @@
 
     text-align: center;
     width: 30%;
-}
-
-.signin{
-    font-family: monospace;
-    background-color: #363537;
-    color: white;
-    box-shadow: 0px 0px 0px;
-    padding: 10px;
-}
-
-.signup{
-    font-family: monospace;
-    background-color: #363537;
-    color: white;
-    margin-left: 50%;
-    translate: -50%;
-    width: fit-content;
-    box-shadow: 0px 0px 0px;
-    padding: 10px;
 }

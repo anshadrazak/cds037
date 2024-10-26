@@ -1,5 +1,13 @@
 import React from 'react'
 import './Clogin.css'
+import { Navigate } from 'react-router-dom'
+
+const gotosignup = () => {
+  Navigate('/')
+}
+
+
+
 
 const Clogin = () => {
   return (
@@ -10,9 +18,9 @@ const Clogin = () => {
                 <input type='text'></input>
                 <p>Password</p>
                 <input type='password'></input><br></br><br></br>
-                <button className='submitbtn' type='submit'>SIGNIN</button>
-                <p>OR</p>
-                <a href='/'><button>SIGNUP</button></a>
+                <button className='signin' type='submit'>SignIn</button>
+                <a href='/'><p>OR</p></a>
+                <a href='/customersignup'><div className='signup'>SignUp</div></a>
             </form>
         </div>
     </div>
