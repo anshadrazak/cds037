@@ -1,0 +1,13 @@
+.headermainctr{
+    background-color: #839788;
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr .1fr;
+    align-items: center;
+    height: 10vh;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
