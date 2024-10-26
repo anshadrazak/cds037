@@ -1,42 +1,45 @@
 import React, { useState } from 'react';
 import './Csignup.css'
+import { useNavigate } from "react-router-dom";
 
 
 const Csignup = () => {
-
+    const navigate = useNavigate()
+    const [errorMessage, setErrorMessage] = useState('')
+    const [ action, setAction] = useState('')
     const [ username, setUsername] = useState('')
     const [ password, setPassword] = useState('')
     const [ number, setNumber] = useState('')
     const [ email, setEmail] = useState('')
     const [ age, setAge] = useState('')
     
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
-    //     if (username === '' || password === '' || number === '' || email === '' || age === '') {
-    //       setErrorMessage('All fields are required');
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        if (username === '' || password === '' || number === '' || email === '' || age === '') {
+          setErrorMessage('All fields are required');
 
-    //       return;
-    //     }
-    //     if (action === 'signUp') {
-    //       await Sign_Up();
-    //     }
-    //   };
+          return;
+        }
+        if (action === 'signUp') {
+          await Sign_Up();
+        }
+      };
 
-    //   const Sign_Up = async () => {
-    //     try {
-    //       await fetch('http://localhost:5000/csignup', {
-    //         method: 'POST',
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ username: username, password: password, age: age, email: email, number: number })
-    //       });
+      const Sign_Up = async () => {
+        try {
+          await fetch('http://localhost:5000/csignup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username: username, password: password, age: age, email: email, number: number })
+          });
           
           
-    //     } catch (error) {
-    //       console.error('Failed to fetch', error);
-    //     }navigate('/');
-    //   };
+        } catch (error) {
+          console.error('Failed to fetch', error);
+        }navigate('/');
+      };
 
 
     

@@ -25,13 +25,13 @@ app.use(cors());
 app.use(express.json());
 
 
-app.post('/signup', async (req, res) => {
+app.post('/csignup', async (req, res) => {
     try {
-        const { username, password, age, gender } = req.body;
+        const { username, password, age, number, email } = req.body;
 
         await connectToDb();
         const hashedPassword = await bcrypt.hash(password, 10);
-        const result = await client.db('places').collection('users').insertOne({name: username, password: hashedPassword, age: age, gender: gender})
+        const result = await client.db('farmily').collection('farmers').insertOne({name: username, password: hashedPassword, age: age, email: email, number: number})
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
         console.error(error);
