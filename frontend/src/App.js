@@ -8,6 +8,7 @@ import Clogin from './Clogin';
 import Flogin from './Flogin';
 import Header from './Header';
 import Csignup from './Csignup';
+import Fsignup from './Fsignup';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/customerlogin' element={<Clogin/>}/>
           <Route path='/farmerlogin' element={<Flogin/>}/>
           <Route path='/customersignup' element={<Csignup/>}/>
+          <Route path='/farmersignup' element={<Fsignup/>}/>
         </Routes>
       </Router>
     </div>

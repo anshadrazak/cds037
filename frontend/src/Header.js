@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='headermainctr'>
         <div className='headergrids blank'></div>
-        <div className='headergrids logo'>LOGO</div>
+        <a href='/'><div className='headergrids logo'>FARMILY</div></a>
         <div className='headergrids blank'></div>
         <a href='/'><div className='headergrids home'>HOME</div></a>
         <a href='/mainlogin'><div className='headergrids login'>LOGIN</div></a>

@@ -8,12 +8,12 @@ const Mainlogin = () => {
         <div className='ltxtsdiv'>
                     <a href='/customerlogin'>
                     <div className='lcustomerbtn'>
-                        <h3 >Are you a Customer?</h3>
+                        <h3 >Customer?</h3>
                         <p>Click here</p>
                     </div></a>
                     <a href='/farmerlogin'>
                     <div className='lfarmerbtn'>
-                        <h3 >Are you a Farmer?</h3>
+                        <h3 >Farmer?</h3>
                         <p>Click here</p>
                     </div></a>
         </div>

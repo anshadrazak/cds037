@@ -1,4 +1,6 @@
 .headermainctr{
+    font-size: 20px;
+    font-family: monospace;
     background-color: #839788;
     display: grid;
     grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr .1fr;
