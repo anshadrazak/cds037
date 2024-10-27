@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Csignup.css'
 import { useNavigate } from "react-router-dom";
+import { toast } from 'sonner';
 
 
 const Csignup = () => {
@@ -27,6 +28,7 @@ const Csignup = () => {
 
       const Sign_Up = async () => {
         try {
+          
           await fetch('http://localhost:5000/csignup', {
             method: 'POST',
             headers: {
@@ -35,7 +37,7 @@ const Csignup = () => {
             body: JSON.stringify({ username: username, password: password, age: age, email: email, number: number })
           });
           
-          
+          toast.success('Sign Up Successful')
         } catch (error) {
           console.error('Failed to fetch', error);
         }navigate('/');
@@ -47,19 +49,19 @@ const Csignup = () => {
   return (
     <div className='csignup'>
         <div className='csmaindiv'>
-            <form>
+            <form onSubmit={handleFormSubmit}>
                 <p>Username</p>
-                <input type='text' value={username}></input>
+                <input type='text' value={username} onChange={(e) => setUsername(e.target.value)}></input>
                 <p>Password</p>
-                <input type='password' value={password}></input>
+                <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 <p>Phone</p>
-                <input type='number' value={number}></input>
+                <input type='number' value={number} onChange={(e) => setNumber(e.target.value)}></input>
                 <p>Email</p>
-                <input type='email' value={email}></input>
+                <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
                 <p>Age</p>
-                <input type='number' value={age}></input>
+                <input type='number' value={age} onChange={(e) => setAge(e.target.value)}></input>
                 <br></br><br></br>
-                <button className='signin' type='submit'>SignUp</button>
+                <button className='signin' type='submit' onClick={() => setAction('signUp')}>SignUp</button>
             </form>
         </div>
     </div>

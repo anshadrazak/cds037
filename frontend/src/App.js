@@ -9,6 +9,7 @@ import Flogin from './Flogin';
 import Header from './Header';
 import Csignup from './Csignup';
 import Fsignup from './Fsignup';
+import { Toaster, toast } from 'sonner';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <div className="App">
       <Header/>
       <Router>
-        
+        <Toaster/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/farmersdashboard' element={<Fdashboard/>}/>
