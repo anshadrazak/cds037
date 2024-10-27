@@ -25,6 +25,25 @@ async function connectToDb() {
 app.use(cors());
 app.use(express.json());
 
+app.get('/farmerslisting', async (req, res) => {
+    try {
+        await connectToDb();
+        console.log('Fetching projects from database');
+
+        const projects = await client.db("Farmily").collection("farmerslisting").find({}).toArray();
+        console.log('Projects fetched:', projects);
+
+        if (projects.length > 0) {
+            res.json(projects);
+        } else {
+            res.status(404).send('No projects found');
+        }
+    } catch (e) {
+        console.error('Error fetching projects:', e.message);
+        res.status(500).send(e.message);
+    }
+});
+
 
 app.post('/csignup', async (req, res) => {
     try {

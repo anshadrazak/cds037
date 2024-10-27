@@ -50,7 +50,7 @@ const Clogin = () => {
       console.log('Sign in successful', data);
 
       toast.success("Sign In successful");
-
+      localStorage.setItem(username, username)
       navigate('/farmerslisting');
     } catch (error) {
       

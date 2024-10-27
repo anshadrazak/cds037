@@ -50,7 +50,7 @@ const Flogin = () => {
 
       toast.success("Sign In successful");
       localStorage.setItem(username, username);
-      navigate('/farmerslisting');
+      navigate('/customerslisting');
     } catch (error) {
       
       console.error('Failed to fetch', error);
@@ -69,7 +69,7 @@ const Flogin = () => {
                 <input type='text' value={username} onChange={(e) => setUsername(e.target.value)}></input>
                 <p>Password</p>
                 <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br><br></br>
-                <button className='signin' type='submit'>SignIn</button>
+                <button className='signin' onClick={() => setAction('signIn')} type='submit'>SignIn</button>
                 <a href='/'><p>OR</p></a>
                 <a href='/farmersignup'><div className='signup'>SignUp</div></a>
             </form>
