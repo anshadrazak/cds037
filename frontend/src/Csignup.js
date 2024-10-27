@@ -49,20 +49,23 @@ const Csignup = () => {
   return (
     <div className='csignup'>
         <div className='csmaindiv'>
+          <div className='cssubdiv'>
+            <h3>Create Your Account </h3>
             <form onSubmit={handleFormSubmit}>
-                <p>Username</p>
-                <input type='text' value={username} onChange={(e) => setUsername(e.target.value)}></input>
-                <p>Password</p>
-                <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
-                <p>Phone</p>
-                <input type='number' value={number} onChange={(e) => setNumber(e.target.value)}></input>
-                <p>Email</p>
-                <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                <p>Age</p>
-                <input type='number' value={age} onChange={(e) => setAge(e.target.value)}></input>
+                
+                <input type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}></input>
+                
+                <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                
+                <input placeholder='Phone Number' type='number' value={number} onChange={(e) => setNumber(e.target.value)}></input>
+                
+                <input placeholder='Email' type='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                
+                <input placeholder='DOB' type='date' value={age} onChange={(e) => setAge(e.target.value)}></input>
                 <br></br><br></br>
                 <button className='signin' type='submit' onClick={() => setAction('signUp')}>SignUp</button>
             </form>
+            </div>
         </div>
     </div>
   )

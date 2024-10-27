@@ -1,0 +1,37 @@
+.fbtndiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fsubdiv{
+    text-align: center;
+}
+
+.fsignin, .fsignup{
+    font-family: monospace;
+    font-size: large;
+    padding: 10px;
+    background-color: #363537;
+    box-shadow: 0px 0px 0px;
+    color: white;
+}
+
+.fsignin:hover, .fsignup:hover{
+    background-color: #f6eed8;
+    color: #363537;
+    border: 1px #363537 solid;
+}
+
+.flogin{
+    
+        font-family: monospace;
+        font-size: large;
+        background-image: url(./Files/bg7.webp);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+}
+

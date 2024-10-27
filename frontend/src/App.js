@@ -11,6 +11,7 @@ import Csignup from './Csignup';
 import Fsignup from './Fsignup';
 import { Toaster, toast } from 'sonner';
 import Farmerslisting from './Farmerslisting';
+import Footer from './Footer';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           
         </Routes>
       </Router>
+      
     </div>
   );
 }

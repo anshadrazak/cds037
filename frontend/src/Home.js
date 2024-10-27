@@ -5,6 +5,7 @@ import hero from './Files/hero.png'
 import sh from './Files/sh.png'
 import ch from './Files/ch.png'
 import hh from './Files/hp.png'
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -57,6 +58,7 @@ const Home = () => {
             <h2 className='sloganone'>Connecting Fields to Families</h2>
             <h2 className='slogantwo'>Farmilly</h2>
         </div>
+        <Footer/>
     </div>
   )
 }

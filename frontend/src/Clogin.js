@@ -64,15 +64,20 @@ const Clogin = () => {
   return (
     <div className='clogin'>
         <div className='clmaindiv'>
+          <div className='subdiv'>
+          <h3 className='cat'>Sign In Your Account</h3>
             <form onSubmit={handleFormSubmit}>
-                <p>Username</p>
-                <input type='text' value={username} onChange={(e) => setUsername(e.target.value)}></input>
-                <p>Password</p>
-                <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br><br></br>
-                <button className='signin' onClick={() => setAction('signIn')} type='submit'>SignIn</button>
+                
+                <input type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}></input>
+                
+                <input className='pinp' type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br><br></br>
+                <div className='btndiv'>
+                <button className='csignin' onClick={() => setAction('signIn')} type='submit'>SignIn</button>
                 <a href='/'><p>OR</p></a>
                 <a href='/customersignup'><div className='signup'>SignUp</div></a>
+                </div>
             </form>
+            </div>
         </div>
     </div>
   )

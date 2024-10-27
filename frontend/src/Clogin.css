@@ -1,29 +1,50 @@
 .clogin{
     font-family: monospace;
     font-size: large;
-    background-color: #839788;
+    background-image: url(./Files/bg.jpg);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+input{
+    height: 30px;
+    width: 98%;
+}
+
+.btndiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    /* border: 2px pink solid; */
+}
+
+.subdiv{
+    width: 80%;
+    /* border: 2px solid red; */
+}
 
 .clmaindiv{
-    background: rgba(255, 255, 255, 0.452);
-    backdrop-filter: blur(30px);
+    /* border: 2px green solid; */
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(7px);
     height: 60%;
     border-radius: 30px;
     display: flex; 
     padding: 10px;
     flex-direction: column;
     justify-content: center;
-
-    text-align: center;
+    align-items: center;
+    
     width: 30%;
 }
 
-.signin{
+
+.csignin{
     font-family: monospace;
     background-color: #363537;
     color: white;
@@ -35,9 +56,23 @@
     font-family: monospace;
     background-color: #363537;
     color: white;
-    margin-left: 50%;
-    translate: -50%;
+    
     width: fit-content;
     box-shadow: 0px 0px 0px;
     padding: 10px;
 }
+
+.csignin:hover, .signup:hover{
+    background-color: #f6eed8;
+    color: #363537;
+    border: 1px #363537 solid;
+}
+
+.pinp{
+    margin-top: 20px;
+}
+
+.cat{
+    font-weight: 900;
+}
+

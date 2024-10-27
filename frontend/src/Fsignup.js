@@ -3,7 +3,7 @@ import React from 'react'
 import './Csignup.css'
 import { useNavigate } from 'react-router-dom'
 import {toast} from 'sonner';
-
+import './Fsignup.css'
 
 const Fsignup = () => {
 
@@ -49,20 +49,23 @@ const Fsignup = () => {
   return (
     <div className='csignup'>
         <div className='csmaindiv'>
+          <div className='fssubdiv'>
+          <h3>Create Your Account</h3>
             <form onSubmit={handleFormSubmit}>
-                <p>Username</p>
-                <input value={username} onChange={(e) => setUsername(e.target.value)} type='text'></input>
-                <p>Password</p>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} type='password'></input>
-                <p>Phone</p>
-                <input value={number} onChange={(e) => setNumber(e.target.value)} type='number'></input>
-                <p>Place</p>
-                <input value={place} onChange={(e) => setPlace(e.target.value)} type='text'></input>
-                <p>Age</p>
-                <input value={age} onChange={(e) => setAge(e.target.value)} type='number'></input>
+                
+                <input placeholder='Username'  value={username} onChange={(e) => setUsername(e.target.value)} type='text'></input>
+                
+                <input placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} type='password'></input>
+                
+                <input placeholder='Phone Number' value={number} onChange={(e) => setNumber(e.target.value)} type='number'></input>
+              
+                <input placeholder='Place' value={place} onChange={(e) => setPlace(e.target.value)} type='text'></input>
+                
+                <input placeholder='Age' value={age} onChange={(e) => setAge(e.target.value)} type='number'></input>
                 <br></br><br></br>
                 <button className='signin' type='submit' onClick={() => setAction('signUp')}>SignUp</button>
             </form>
+            </div>
         </div>
     </div>
   )

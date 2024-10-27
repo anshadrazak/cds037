@@ -1,7 +1,12 @@
+
+
+
+
 .headermainctr{
-    font-size: 20px;
-    font-family: monospace;
-    background-color: #839788;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background-color: #637066;
     display: grid;
     grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr .1fr;
     align-items: center;
@@ -9,7 +14,23 @@
     
 }
 
+
+
 a{
     text-decoration: none;
     color: black;
+}
+
+.home, .login, .dashboard{
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f6eed7;
+}
+
+.home:hover, .login:hover, .dashboard:hover{
+    
+    background-color: #363537;
+    color: #f6eed8;
 }

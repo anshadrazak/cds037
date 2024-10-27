@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Clogin.css'
+import './Flogin.css'
 import { Navigate } from 'react-router-dom'
 
 import { Toaster,toast } from 'sonner'
@@ -62,16 +63,20 @@ const Flogin = () => {
 
 
   return (
-    <div className='clogin'>
+    <div className='flogin'>
         <div className='clmaindiv'>
             <form onSubmit={handleFormSubmit}>
-                <p>Username</p>
-                <input type='text' value={username} onChange={(e) => setUsername(e.target.value)}></input>
-                <p>Password</p>
-                <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br><br></br>
-                <button className='signin' onClick={() => setAction('signIn')} type='submit'>SignIn</button>
+                <h3>Sign In Your Account</h3>
+                <input placeholder='Username' type='text' value={username} onChange={(e) => setUsername(e.target.value)}></input>
+                
+                <input placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br><br></br>
+                <div className='fbtndiv'>
+                  <div className='fsubdiv'>
+                <button className='fsignin' onClick={() => setAction('signIn')} type='submit'>SignIn</button>
                 <a href='/'><p>OR</p></a>
-                <a href='/farmersignup'><div className='signup'>SignUp</div></a>
+                <a href='/farmersignup'><div className='fsignup'>SignUp</div></a>
+                </div>
+                </div>
             </form>
         </div>
     </div>
