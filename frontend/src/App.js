@@ -10,6 +10,7 @@ import Header from './Header';
 import Csignup from './Csignup';
 import Fsignup from './Fsignup';
 import { Toaster, toast } from 'sonner';
+import Farmerslisting from './Farmerslisting';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path='/farmerlogin' element={<Flogin/>}/>
           <Route path='/customersignup' element={<Csignup/>}/>
           <Route path='/farmersignup' element={<Fsignup/>}/>
+          <Route path='/farmerslisting' element={<Farmerslisting/>}/>
         </Routes>
       </Router>
     </div>

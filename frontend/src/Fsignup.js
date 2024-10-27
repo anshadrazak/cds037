@@ -40,6 +40,7 @@ const Fsignup = () => {
       });
       
       toast.success('Sign Up Successful')
+      
     } catch (error) {
       console.error('Failed to fetch', error);
     }navigate('/');
